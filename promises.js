@@ -72,3 +72,29 @@ async function init() {
 init();
 
 console.log('after create post');
+
+// Get the data received from the fetch operation.
+
+function req1() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response =>  response.json())
+        .then(json => {
+            console.log(json);
+            // json.forEach((js) => console.log(js.body));
+        });
+}
+
+req1();
+
+async function getData() {
+    const Fetch = await fetch('https://dummyjson.com/products');
+
+    const arr = await Fetch.json();
+
+    const products = arr.products;
+    products.forEach((product) => { console.log(product.title); });
+    console.log(arr.products);
+}
+
+getData();
+
