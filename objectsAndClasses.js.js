@@ -56,7 +56,7 @@ console.log(Object.keys(Book));
 // Magazine.prototype = Object.create(Book.prototype);
 // const Mag1 = new Magazine('John Doe', 'Book 1', '2000', 'sept');
 
-// Magazine.prototype.constructor = Magazine;
+// Magazine.prototype.constructor = Magazine; // to change the constructor from book to magazine.
 
 
 // object Prototypes
