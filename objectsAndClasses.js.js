@@ -2,6 +2,13 @@
 
 // Object
 
+ // To get the list of keys of an object
+console.log(Object.keys(Book));
+
+ // To get the list of values of an object
+ console.log(Object.values(Book));
+
+
 // const Book = {
 //     name: 'John Doe',
 //     title: 'Book 1',
