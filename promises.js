@@ -98,3 +98,33 @@ async function getData() {
 
 getData();
 
+
+const cart = ["t-shirt", "Kurta", "Jeans"];
+
+function createOrder(cart, callback) {
+  console.log("Creating order");
+  console.log(JSON.stringify(cart));
+  callback("12345");
+}
+
+function proceedToPayment(orderId, callback) {
+  console.log("Proceeding to payment for : " + orderId);
+  callback("2,50,000");
+}
+
+function showOrderSummary(paymentInfo, callback) {
+  console.log("order summary for : $" + paymentInfo);
+  callback("15,00,000");
+}
+
+function updateWalletBalance(balance) {
+  console.log("Updated wallet balance : " + balance);
+}
+
+createOrder(cart, function(orderId) {
+  proceedToPayment(orderId, function(paymentInfo) {
+    showOrderSummary(paymentInfo, function(balance) {
+      updateWalletBalance(balance);
+    });
+  });
+});
